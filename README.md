@@ -7,3 +7,8 @@ Most Machine Learning algorithms cannot work with categorical data and needs to 
 
 In this technique, the categorical parameters will prepare separate columns for Apple, chicken and broccoli labels. So, wherever there is apple, the value will be 1 in Mapple column and 0 in chicken and broccolu columns, and vice-versa.
 
+# Dummy variable Trap:
+
+The Dummy Variable Trap occurs when two or more dummy variables created by one-hot encoding are highly correlated (multi-collinear). This means that one variable can be predicted from the others, making it difficult to interpret predicted coefficient variables in regression models. In other words, the individual effect of the dummy variables on the prediction model can not be interpreted well because of multicollinearity.
+According to our example, we have three columns after the ONE HOT ENCODIG, in order to prevent frpm this issue we need to drop a columns. If the value of chicke and apple columns is zero, this means that the record belongs to the broccoli column so in our case we can drop broccoli column.
+we can drop any column. 
